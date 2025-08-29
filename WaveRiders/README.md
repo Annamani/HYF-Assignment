@@ -1,41 +1,45 @@
+CHECKLIST
+
+
+
 Requirements of the project
 
 This checklist is here to help you feel confident that your project meets all the expectations. You can refer back to it as you build your page and mark items off as you complete them. The steps don’t need to be followed in a specific order, just make sure everything is included in the end. Most importantly, your final design should closely match the mockup, both on desktop and mobile screens.
 
 Structure and Content
 
-Use semantic HTML elements (<nav>, <header>, <main>, <section>, <footer>, etc.)
+<!-- Use semantic HTML elements (<nav>, <header>, <main>, <section>, <footer>, etc.) -->
 
 
-Include a navigation bar with the WaveRiders logo and links: About, Courses, Shop, Contact
+<!-- Include a navigation bar with the WaveRiders logo and links: About, Courses, Shop, Contact -->
 
 
-Add a hero section with a large heading, subtitle, and a “Book your lesson” button
+<!-- Add a hero section with a large heading, subtitle, and a “Book your lesson” button -->
 
 
-Display a background image of waves in the hero section
+<!-- Display a background image of waves in the hero section -->
 
 
-Include a gallery section with two images of surfing squirrels
+<!-- Include a gallery section with two images of surfing squirrels -->
 
 
-Add an about section explaining why to choose WaveRiders, with three feature blocks (icon, title, description)
+<!-- Add an about section explaining why to choose WaveRiders, with three feature blocks (icon, title, description) -->
 
 
-Include a testimonials section with three short customer reviews inside styled cards
+<!-- Include a testimonials section with three short customer reviews inside styled cards -->
 
 
 Add a footer with navigation links, social media icons or emojis, contact information, and a Google Map embedded using <iframe>
 
  Layout and Styling
 
-Use Flexbox or Grid for layout across all main sections (navigation bar, hero, about, testimonials, footer)
+<!-- Use Flexbox or Grid for layout across all main sections (navigation bar, hero, about, testimonials, footer)
 
 
 Match the font, colors, and spacing from the mockup design
 
 
-Add hover effects to footer links or icons
+Add hover effects to footer links or icons -->
 
 
 Use card-style boxes (e.g. border, shadow, background) for testimonials
@@ -45,13 +49,13 @@ Make sure the footer stays at the bottom of the page and never overlaps content
 
 Accessibility and Semantics
 
-Use appropriate HTML tags and structure for meaning, not just appearance
+<!-- Use appropriate HTML tags and structure for meaning, not just appearance
 
 
-Add alt text to all images for accessibility
+<!-- Add alt text to all images for accessibility -->
 
 
-Keep content organized and readable with clear headings and sections
+<!-- Keep content organized and readable with clear headings and sections -->
 
 Responsive Design & CSS Best Practices
 
