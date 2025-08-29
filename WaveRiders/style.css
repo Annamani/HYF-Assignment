@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+}
+/* .logo{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999;
+    border-style: none;
+}
+.logo_img{   
+  width: 100px;
+  height: 100px;
+  border-color: rgb(201, 182, 157);
+} */
+.nav_links ul{
+  display: flex;
+  justify-content: end;
+  align-items: stretch;
+}
+.nav_links li{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0 ;
+    padding:0;
+    font-size: large;
+}
+.nav_links a {
+    padding: 5px 10px;
+    text-decoration: none;
+} 
+button {
+    background-color:#0d0d0d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.375rem;
+    border-width:1px;
+}
+/* Use Flexbox or Grid for layout across all main sections 
+(navigation bar, hero, about, testimonials, footer)*/
+.hero_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+    color: white;
+}
+.background_img {
+    background-image: url('./images/waves_img.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity:0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: none;
+    border-radius: 1rem;
+}
+    
+.intro_text {
+    text-align: center;
+    margin-top: 20px;
+} 
+.intro_text h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color:#0d0d0d;
+}
+.intro_text p {
+    font-size: 1.5rem;
+    color: #0d0d0d;
+}
+.intro_text img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.hero_section button{
+    background-color: #0d0d0d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+/* gallery section */
+.gallery_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color:lightblue;
+    width:100%;
+    height: 100%;
+    border: none;
+    border-radius:1rem;
+
+}
+.surfing_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:48px;
+    padding:64px;
+    margin-top: 20px;
+}
+.surfing_images img {
+    width:35rem;
+    height: 478px;
+    border-radius: 10px;
+}
+/* About Section */
+/* Using grid */
+
+.about_section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(244, 249, 250);
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+}
+.about_text h3{
+    padding: 0 20px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.about_text p {
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+.feature-container{
+    display: grid;
+    justify-items: center;
+    text-align: start;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+}
+
+.feature_block{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px;
+    margin-top: 20px;
+   
+}
+.feature_block i{
+    font-size: 2rem;
+    color: #0d0d0d;
+    margin-bottom: 10px;
+}
+.feature_block h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color:#0d0d0d;
+}
+.feature_block p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+/* Testimonials Section */
+.testimonials_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+}
+.testimonials_header h3{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.testimonials_header p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+.testimonial-container{
+    padding:20px;
+    margin-top: 20px;
+    display: grid;
+    justify-items: center;
+    text-align: start;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+}
+.testimonial-card{
+    display: inline-block;
+    vertical-align:middle;
+    padding: 30px;
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.testimonial-card p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+.testimonial-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
