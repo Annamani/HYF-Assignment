@@ -217,14 +217,22 @@ button:hover {
     grid-template-columns: auto auto auto;
 }
 .testimonial-card{
-    display: inline-block;
-    vertical-align:middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 30px;
     width:100%;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.testimonial-card img{
+    width:auto;
+    height: auto;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 .testimonial-card p{
     font-size: 1.1rem;
