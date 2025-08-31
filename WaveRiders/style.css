@@ -3,32 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
-
-.logo_img{   
-  width: 100px;
-  height: 100px;
-  border-color: rgb(201, 182, 157);
-}
-.menu_icon {
+/* .menu_icon {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+} */
+/*Desktop Navigation bar*/
+.navbar-desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d0d0d;
 }
-.nav_links ul {
+.desktop_nav_links ul {
     display: flex;
     justify-content: end;
     align-items: stretch;
 }
 
-.nav_links li {
+.desktop_nav_links li {
     list-style-type: none;
     text-decoration: none;
     margin: 0;
@@ -36,10 +42,46 @@
     font-size: large;
 }
 
-.nav_links a {
+.desktop_nav_links a {
     padding: 5px 10px;
     text-decoration: none;
 }
+/* Mobile Navigation Bar */
+.navbar-mobile{
+    display: none;
+    padding: 1rem 2rem;
+    color: white;
+}
+.navbar-mobile .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.navbar-mobile .mobile-menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navbar-mobile .mobile-menu-icon .menu-text {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+.mobile_nav_links{
+    display: none;
+    list-style: none;
+    margin-top: 1rem;
+}
+.mobile_nav_links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem 0;
+}
+
 
 button {
     background-color: #0d0d0d;
@@ -405,15 +447,14 @@ button:hover {
 
 /* Responsive designing */
 @media (max-width: 768px) {
-    .nav_links ul {
+    .mobile_nav_links ul {
         flex-direction: column;
         align-items: center;
     }
 
-    .nav_links li {
+    .mobile_nav_links li {
         margin: 10px 0;
     }
-
     .hero_section {
         height: auto;
         padding: 20px;
@@ -482,15 +523,20 @@ button:hover {
         font-size: 1rem;
         padding: 8px 16px;
     }
-    .menu_icon{
-        display: block;
-    }
-    .nav_links{
+     .desktop_nav_links{
         display: none;
         width: 100%;
     }
-    .navbar{
+    .desktop_navbar{
         flex-direction: row
+    }
+    .navbar-mobile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+        height:100%;
     }
     .footer_icons{
         flex-direction: row;

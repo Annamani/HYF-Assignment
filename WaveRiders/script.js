@@ -24,11 +24,12 @@ menu_icon.addEventListener("click",()=>{
     nav_links.classList.toggle('active');
     nav_links.style.display="flex";
     nav_links.style.flexDirection="column";
+    nav_links.style.justifyContent="center";
+    nav_links.style.alignItems="center";
     nav_links.style.textAlign="center";
     nav_links.style.height="100%";
     nav_links.style.width="100%";
     navbar.style.flexDirection="column";
     menu_icon.style.display="none";
-
 })
 
