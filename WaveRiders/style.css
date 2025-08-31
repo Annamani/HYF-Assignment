@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -11,76 +12,77 @@ body {
     margin: 0;
     padding: 0;
 }
-/* .menu_icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-} */
-/*Desktop Navigation bar*/
-.navbar-desktop{
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-desktop .logo_img,
+.navbar-mobile .logo_img {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Desktop Navigation Bar */
+.navbar-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    width: 100%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0d0d0d;
-}
-.desktop_nav_links ul {
-    display: flex;
-    justify-content: end;
-    align-items: stretch;
 }
 
-.desktop_nav_links li {
-    list-style-type: none;
+
+.navbar-mobile {
+    display: none;
+    padding: 1rem 2rem;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+.desktop_nav_links ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
-    font-size: large;
 }
 
 .desktop_nav_links a {
-    padding: 5px 10px;
     text-decoration: none;
+    color: #0d0d0d;
+    font-size: 1rem;
+
 }
-/* Mobile Navigation Bar */
-.navbar-mobile{
-    display: none;
-    padding: 1rem 2rem;
-    color: white;
-}
-.navbar-mobile .logo a {
-    text-decoration: none;
+
+.mobile_menu_icon {
+     display: none;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-.navbar-mobile .mobile-menu-icon {
-    display: flex;
-    flex-direction: column;
     cursor: pointer;
 }
-.navbar-mobile .mobile-menu-icon .menu-text {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-.mobile_nav_links{
+
+
+.mobile_nav_links {
     display: none;
     list-style: none;
     margin-top: 1rem;
 }
-.mobile_nav_links a{
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    display: block;
-    padding: 0.5rem 0;
+
+.mobile_nav_links ul {
+    list-style: none;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fff;
+
 }
+
+.mobile_nav_links a {
+    text-decoration: none;
+    color: #0d0d0d;
+    font-size: 1rem;
+
+}
+
 
 
 button {
@@ -291,7 +293,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:3rem;
+    padding: 3rem;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -447,14 +449,25 @@ button:hover {
 
 /* Responsive designing */
 @media (max-width: 768px) {
-    .mobile_nav_links ul {
-        flex-direction: column;
+    .navbar-desktop {
+        display: none;
+    }
+    .mobile_menu_icon{
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        padding: 1rem 2rem;
     }
 
-    .mobile_nav_links li {
-        margin: 10px 0;
+    .mobile_nav_links.active {
+        display: block;
     }
+
     .hero_section {
         height: auto;
         padding: 20px;
@@ -489,6 +502,13 @@ button:hover {
         grid-template-columns: auto;
         gap: 20px;
     }
+    .testimonial-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .testimonial-card{
+        padding: 2rem;
+    }
 
     .footer-logo img {
         width: 60px;
@@ -507,43 +527,4 @@ button:hover {
         align-items: center;
     }
 
-}
-
-/* hero-section responsive */
-@media (max-width: 480px) {
-    .intro_text h2 {
-        font-size: 1.5rem;
-    }
-
-    .intro_text p {
-        font-size: 1rem;
-    }
-
-    .hero_section button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-     .desktop_nav_links{
-        display: none;
-        width: 100%;
-    }
-    .desktop_navbar{
-        flex-direction: row
-    }
-    .navbar-mobile{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        width: 100%;
-        height:100%;
-    }
-    .footer_icons{
-        flex-direction: row;
-        gap: 10px;
-        margin: 0;
-    }
-    .footer-logo img {
-        width: 30px;
-    }
 }

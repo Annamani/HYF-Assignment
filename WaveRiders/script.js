@@ -16,20 +16,44 @@ contact_button.addEventListener("click",()=>{
 // back_image.setAttribute("alt","waves image");
 
 
-const menu_icon=document.getElementsByClassName('menu_icon')[0];
-const nav_links=document.getElementsByClassName('nav_links')[0];
-const navbar=document.getElementsByClassName('navbar')[0];
+// const menu_icon=document.getElementsByClassName('mobile_menu_icon')[0];
+// const nav_links=document.getElementsByClassName('mobile_nav_links')[0];
+// const navbar=document.getElementsByClassName('navbar-desktop')[0];
 
-menu_icon.addEventListener("click",()=>{
-    nav_links.classList.toggle('active');
-    nav_links.style.display="flex";
-    nav_links.style.flexDirection="column";
-    nav_links.style.justifyContent="center";
-    nav_links.style.alignItems="center";
-    nav_links.style.textAlign="center";
-    nav_links.style.height="100%";
-    nav_links.style.width="100%";
-    navbar.style.flexDirection="column";
-    menu_icon.style.display="none";
-})
+// menu_icon.addEventListener("click",()=>{
+//     nav_links.classList.toggle('active');
+//     nav_links.style.display="flex";
+//     nav_links.style.flexDirection="column";
+//     nav_links.style.justifyContent="center";
+//     nav_links.style.alignItems="center";
+//     nav_links.style.textAlign="center";
+//     nav_links.style.height="100%";
+//     nav_links.style.width="100%";
+//     navbar.style.flexDirection="column";
+//     menu_icon.style.display="none";
+// })
 
+// const menuIcon = document.querySelector('.mobile_menu_icon');
+// const mobileLinks = document.querySelector('.mobile_nav_links');
+
+// menuIcon.addEventListener('click', () => {
+//   mobileLinks.classList.toggle('active');
+// });
+// menuIcon.addEventListener('click', () => {
+//   if (mobileLinks.classList.contains('active')) {
+//     menuIcon.style.display = 'none';
+//     } else {
+//     menuIcon.style.display = 'block';
+//     }
+// });
+
+function toggleMenu() {
+    const mobileLinks = document.querySelector('.mobile_nav_links');
+    mobileLinks.classList.toggle('active');
+    const menuIcon = document.querySelector('.mobile_menu_icon');   
+    if (mobileLinks.classList.contains('active')) {
+        menuIcon.style.display = 'none';
+    } else {
+        menuIcon.style.display = 'block';
+    }
+}
