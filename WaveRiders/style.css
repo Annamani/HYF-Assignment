@@ -22,6 +22,7 @@ a {
 .navbar-mobile .logo_img {
     max-width: 120px;
     height: auto;
+    padding:1rem;
 }
 
 /* Desktop Navigation Bar */
@@ -31,8 +32,6 @@ a {
     align-items: center;
     padding: 1rem 2rem;
 }
-
-
 .navbar-mobile {
     display: none;
     padding: 1rem 2rem;

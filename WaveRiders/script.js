@@ -33,19 +33,6 @@ contact_button.addEventListener("click",()=>{
 //     menu_icon.style.display="none";
 // })
 
-// const menuIcon = document.querySelector('.mobile_menu_icon');
-// const mobileLinks = document.querySelector('.mobile_nav_links');
-
-// menuIcon.addEventListener('click', () => {
-//   mobileLinks.classList.toggle('active');
-// });
-// menuIcon.addEventListener('click', () => {
-//   if (mobileLinks.classList.contains('active')) {
-//     menuIcon.style.display = 'none';
-//     } else {
-//     menuIcon.style.display = 'block';
-//     }
-// });
 
 function toggleMenu() {
     const mobileLinks = document.querySelector('.mobile_nav_links');
