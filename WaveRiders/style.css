@@ -56,7 +56,7 @@ a {
 }
 
 .mobile_menu_icon {
-     display: none;
+    display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -285,16 +285,17 @@ button:hover {
 
 .testimonial-content {
     display: flex;
-
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .testimonial-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    width: 100%;
+    padding: 1rem;
+    /* width: 100%; */
+    max-width: 300px;
+    height: 200px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: white;
@@ -323,7 +324,7 @@ button:hover {
     margin-left: 15px;
 }
 
-.testimonial-profile h4 {
+.testimonial-profile h5 {
     font-size: 1.1rem;
     line-height: 1.1;
     color: #333;
@@ -354,8 +355,10 @@ button:hover {
 
 .footer_icons {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .footer-logo img {
@@ -370,7 +373,6 @@ button:hover {
     color: #0d0d0d;
     font-size: 1.5rem;
     margin-left: 0;
-
     text-decoration: none;
     padding: 5px;
     transition: font-size 0.3s ease;
@@ -380,7 +382,6 @@ button:hover {
     color: #ce3232;
     cursor: pointer;
     font-size: xx-large;
-
 }
 
 /* Updated twitter icon */
@@ -448,15 +449,48 @@ button:hover {
 }
 
 /* Responsive designing */
+/* For large desktops */
+/* 1280px and above: Large desktops. */
+@media screen and (min-width: 1280px) {
+    .feature-container,
+    .testimonial-container {
+        grid-template-columns: auto auto auto auto;
+        gap: 50px 100px;
+    }
+}
+/* For tablets and small desktops */
+/* 768px to 1279px: Tablets and small desktops. */
+@media (max-width: 1279px) and (min-width: 769px) {
+    .feature-container,
+    .testimonial-container {
+        grid-template-columns: auto auto;
+        gap: 50px 100px;
+    }
+    .surfing_images img {
+        height: auto;
+        max-width: 300px;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        border: 0;
+        border-radius: 1rem;
+        margin-top: 20px;
+        padding: 5px;
+    }
+}
+/* For tablets */
 @media (max-width: 768px) {
     .navbar-desktop {
         display: none;
     }
-    .mobile_menu_icon{
+
+    .mobile_menu_icon {
         display: block;
         font-size: 1.5rem;
         cursor: pointer;
     }
+
     .navbar-mobile {
         display: flex;
         justify-content: space-between;
@@ -502,29 +536,76 @@ button:hover {
         grid-template-columns: auto;
         gap: 20px;
     }
+
     .testimonial-content {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
     }
-    .testimonial-card{
-        padding: 2rem;
+    .testimonial-card {
+        padding: 1rem;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
     }
-
-    .footer-logo img {
-        width: 60px;
-    }
-
     .footer_content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+    }
+    .footer_icons {
+        flex-direction: row;
+        margin: 0;
+        align-items: start;
+    }
+    .footer-logo img {
+        height: auto;
+        display: block;
+        padding: 10px;
+        margin: 0;
     }
 
+    .social_media a {
+        font-size: 1rem;
+        align-items: self-end;
+        padding: 2px;
+        margin-left: 5px;
+    }
+    .social_media a:hover {
+        color: #ce3232;
+        cursor: pointer;
+    }
     .footer_links {
         margin: 0;
         padding: 10px;
         flex-direction: column;
-        align-items: center;
+        color:#0d0d0d;  
+      }
+    .map_navigation iframe {
+        width: 100%;
+        height: auto;
+        border: 0;
+        border-radius: 1rem;
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+/* 480px: Larger smartphones. */
+@media (max-width: 480px) {
+  .footer_icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+/* 320px: Small mobile devices. */
+@media (max-width: 320px) {
+    .intro_text h2 {
+        font-size: 1.5rem;
     }
 
+    .intro_text p {
+        font-size: 1rem;
+    }
 }
