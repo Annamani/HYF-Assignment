@@ -355,7 +355,7 @@ button:hover {
 .footer_icons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: column;
     padding: 1rem;
 }
@@ -371,7 +371,7 @@ button:hover {
 .social_media a {
     color: #0d0d0d;
     font-size: 1.5rem;
-    margin-left: 0;
+    /* margin-left: 0; */
     text-decoration: none;
     padding: 5px;
     transition: font-size 0.3s ease;
@@ -555,6 +555,7 @@ button:hover {
     }
     .footer_icons {
         flex-direction: row;
+        justify-content: space-between;
         margin: 0;
         align-items: start;
     }
